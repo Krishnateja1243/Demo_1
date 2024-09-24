@@ -1,16 +1,16 @@
 package com.example.demo_2.model;
+
 import javax.persistence.Entity;
-import javax.persistence.generatedvalue;
+import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-@Entity
 
+@Entity
 public class Customer {
     @Id
-    @generatedValue(strategy = GenerationType.IDENTITY)
-    private Long 1d;
-    private
-    String name;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
 
     public String getName() {
         return name;

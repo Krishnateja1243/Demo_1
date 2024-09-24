@@ -1,7 +1,10 @@
 package com.example.demo_2.repository;
-package com.example.rewardprogram.repository;
-import com.example.rewardprogram.model.Customer:
-import org.springframework.data. jpa.repository-JpaRepository;
 
-public interface customerRedository extends IbaRepositor < Customer, Long > {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.demo_2.model.Customer;
+
+@Repository
+public interface CustomerRepository extends JpaRepository<Customer, Long > {
 }

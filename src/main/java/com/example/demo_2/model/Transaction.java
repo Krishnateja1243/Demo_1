@@ -2,46 +2,48 @@ package com.example.demo_2.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.id;
+import javax.persistence.Id;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Table;
+
 import java.math.BigDecimal;
 @Entity
+@Table(name = "transaction")
 public class Transaction {
     @Id
-    @Generatedvalue (strategy = GenerationType. IDENTITY)
+    @GeneratedValue(strategy = GenerationType. IDENTITY)
     private Long id;
-    pravace Long customeria:
+    @Column(name = "customer_id")
+    private Long customerId;
+    @Column(name = "amount")
     private BigDecimal amount;
-    private string transactionDate;
-
-    public java.lang.Long getId() {
+    @Column(name = "transaction_date")
+    private String transactionDate;
+    public Long getId() {
         return id;
     }
-
-    public void setId(java.lang.Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
-
-    public pravace getLong() {
-        return Long;
+    public Long getCustomerId() {
+        return customerId;
     }
-
-    public void setLong(pravace aLong) {
-        Long = aLong;
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
     }
-
     public BigDecimal getAmount() {
         return amount;
     }
-
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
-
-    public string getTransactionDate() {
+    public String getTransactionDate() {
         return transactionDate;
     }
-
-    public void setTransactionDate(string transactionDate) {
+    public void setTransactionDate(String transactionDate) {
         this.transactionDate = transactionDate;
     }
+
+
 }

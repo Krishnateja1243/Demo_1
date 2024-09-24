@@ -1,11 +1,22 @@
 package com.example.demo_2.Service;
-package com.example.rewardprogram.service;
-import com.example.rewardprogram.model.Transaction;
-import com.example.rewardprogram.repository.TransactionRepository; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Service;
-import java.math.BigDecimal; import java.util.List; @Service
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo_2.model.Transaction;
+import com.example.demo_2.repository.TransactionRepository;
+
+@Service
 public class RewardService {
     @Autowired
     private TransactionRepository transactionRepository;
+
+    public RewardService(TransactionRepository transactionRepository) {
+        this.transactionRepository = transactionRepository;
+    }
 
     public int calculateRewardPoints(BigDecimal amount) {
         int points = 0;
